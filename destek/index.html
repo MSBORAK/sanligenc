@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Destek ve İletişim · ŞanlıGenç</title>
+<meta name="description" content="ŞanlıGenç — Şanlıurfa gençlik ve şehir uygulaması. Destek ve İletişim.">
+<link rel="icon" href="../logo.jpg">
+<link rel="stylesheet" href="../stil.css">
+</head>
+<body>
+<header>
+  <a class="marka" href="../"><img src="../logo.jpg" alt="" width="40" height="40"><span>ŞanlıGenç</span></a>
+  <div class="dil" role="group" aria-label="Dil / Language">
+    <button type="button" data-dil="tr" aria-pressed="true">TR</button>
+    <button type="button" data-dil="en" aria-pressed="false">EN</button>
+  </div>
+</header>
+<main>
+  <section lang="tr" data-bolum="tr">
+    <nav><a href="../gizlilik/">Gizlilik</a><a href="../kullanim-sartlari/">Kullanım Şartları</a><a href="../kvkk/">KVKK</a><a href="../destek/" aria-current="page">Destek</a></nav>
+    <h1>Destek ve İletişim</h1>
+    
+<p>ŞanlıGenç ile ilgili her türlü soru, öneri, hata bildirimi ve şikâyet için bize ulaşabilirsin. Mesajlara genellikle 1–2 iş günü içinde dönüş yapıyoruz.</p>
+<div class="kart"><strong>E-posta</strong><a href="mailto:sanligenc.destek@gmail.com">sanligenc.destek@gmail.com</a></div>
+<h2>Sık Sorulan Sorular</h2>
+<h3>Nasıl giriş yaparım?</h3>
+<p>Uygulamada e-posta adresini yaz ve adresine gelen doğrulama kodunu gir. Şifre gerekmez. Kod gelmezse Spam / Gereksiz klasörünü kontrol et.</p>
+<h3>Uygunsuz bir içeriği ya da kullanıcıyı nasıl bildiririm?</h3>
+<p>ŞanlıSosyal'de ilgili kıvılcım, mesaj veya profilde <strong>Şikayet Et</strong> seçeneğini kullan. Kişiyi <strong>Engelle</strong> ile engelleyebilirsin. Şikâyetler 24 saat içinde incelenir.</p>
+<h3>Hesabımı nasıl silerim?</h3>
+<p>Uygulamada <strong>Profil → Hesabını Sil</strong> adımlarını izle. Dilersen kayıtlı e-posta adresinden <a href="mailto:sanligenc.destek@gmail.com">sanligenc.destek@gmail.com</a> adresine yazarak da silme talebinde bulunabilirsin.</p>
+<h3>Genç Kart fırsatı çalışmadı, ne yapmalıyım?</h3>
+<p>İşletme adını, tarihi ve yaşadığın sorunu <a href="mailto:sanligenc.destek@gmail.com">sanligenc.destek@gmail.com</a> adresine yaz; işletmeyle iletişime geçelim.</p>
+  </section>
+  <section lang="en" data-bolum="en" hidden>
+    <nav><a href="../gizlilik/#en">Privacy</a><a href="../kullanim-sartlari/#en">Terms</a><a href="../kvkk/#en">KVKK</a><a href="../destek/#en" aria-current="page">Support</a></nav>
+    <h1>Support &amp; Contact</h1>
+    
+<p>Contact us for any questions, suggestions, bug reports, or complaints about ŞanlıGenç. We usually reply within 1–2 business days.</p>
+<div class="kart"><strong>Email</strong><a href="mailto:sanligenc.destek@gmail.com">sanligenc.destek@gmail.com</a></div>
+<h2>Frequently Asked Questions</h2>
+<h3>How do I sign in?</h3>
+<p>Enter your email address in the app, then type the verification code sent to your inbox. No password is needed. If the code doesn't arrive, check your Spam / Junk folder.</p>
+<h3>How do I report objectionable content or a user?</h3>
+<p>On ŞanlıSosyal, use <strong>Report</strong> on the post, message, or profile. You can also <strong>Block</strong> the person. Reports are reviewed within 24 hours.</p>
+<h3>How do I delete my account?</h3>
+<p>In the app, go to <strong>Profile → Delete Account</strong>. You can also request deletion by emailing <a href="mailto:sanligenc.destek@gmail.com">sanligenc.destek@gmail.com</a> from your registered address.</p>
+<h3>A Genç Kart deal didn't work. What should I do?</h3>
+<p>Email the business name, the date, and the issue to <a href="mailto:sanligenc.destek@gmail.com">sanligenc.destek@gmail.com</a> and we'll contact the business.</p>
+  </section>
+</main>
+<footer>© 2026 MSE SOFT · <a href="mailto:sanligenc.destek@gmail.com">sanligenc.destek@gmail.com</a></footer>
+<script>
+(function () {
+  var b = document.querySelectorAll('[data-dil]');
+  function sec(d) {
+    document.querySelectorAll('[data-bolum]').forEach(function (s) { s.hidden = s.getAttribute('data-bolum') !== d; });
+    b.forEach(function (x) { x.setAttribute('aria-pressed', String(x.getAttribute('data-dil') === d)); });
+    document.documentElement.lang = d;
+    try { localStorage.setItem('dil', d); } catch (e) {}
+  }
+  b.forEach(function (x) { x.addEventListener('click', function () { sec(x.getAttribute('data-dil')); }); });
+  var k = null;
+  if (location.hash === '#en') k = 'en';
+  if (!k) { try { k = localStorage.getItem('dil'); } catch (e) {} }
+  if (!k && !/^tr/i.test(navigator.language || '')) k = 'en';
+  sec(k === 'en' ? 'en' : 'tr');
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ŞanlıGenç · ŞanlıGenç</title>
+<meta name="description" content="ŞanlıGenç — Şanlıurfa gençlik ve şehir uygulaması. ŞanlıGenç.">
+<link rel="icon" href="logo.jpg">
+<link rel="stylesheet" href="stil.css">
+</head>
+<body>
+<header>
+  <a class="marka" href="./"><img src="logo.jpg" alt="" width="40" height="40"><span>ŞanlıGenç</span></a>
+  <div class="dil" role="group" aria-label="Dil / Language">
+    <button type="button" data-dil="tr" aria-pressed="true">TR</button>
+    <button type="button" data-dil="en" aria-pressed="false">EN</button>
+  </div>
+</header>
+<main>
+  <section lang="tr" data-bolum="tr">
+    <nav><a href="gizlilik/">Gizlilik</a><a href="kullanim-sartlari/">Kullanım Şartları</a><a href="kvkk/">KVKK</a><a href="destek/">Destek</a></nav>
+    <h1>ŞanlıGenç</h1>
+    
+<p class="giris">Şanlıurfa'daki etkinlikler, gençlere özel indirimler, ulaşım, nöbetçi eczaneler ve şehrin sosyal nabzı — hepsi tek uygulamada.</p>
+<ul class="linkler">
+<li><a href="gizlilik/">Gizlilik Politikası</a></li>
+<li><a href="kullanim-sartlari/">Kullanım Şartları</a></li>
+<li><a href="kvkk/">KVKK Aydınlatma Metni</a></li>
+<li><a href="destek/">Destek ve İletişim</a></li>
+</ul>
+  </section>
+  <section lang="en" data-bolum="en" hidden>
+    <nav><a href="gizlilik/#en">Privacy</a><a href="kullanim-sartlari/#en">Terms</a><a href="kvkk/#en">KVKK</a><a href="destek/#en">Support</a></nav>
+    <h1>ŞanlıGenç</h1>
+    
+<p class="giris">Events in Şanlıurfa, exclusive youth discounts, transport, on-duty pharmacies, and the city's social pulse — all in one app.</p>
+<ul class="linkler">
+<li><a href="gizlilik/#en">Privacy Policy</a></li>
+<li><a href="kullanim-sartlari/#en">Terms of Use</a></li>
+<li><a href="kvkk/#en">KVKK Disclosure Notice</a></li>
+<li><a href="destek/#en">Support &amp; Contact</a></li>
+</ul>
+  </section>
+</main>
+<footer>© 2026 MSE SOFT · <a href="mailto:sanligenc.destek@gmail.com">sanligenc.destek@gmail.com</a></footer>
+<script>
+(function () {
+  var b = document.querySelectorAll('[data-dil]');
+  function sec(d) {
+    document.querySelectorAll('[data-bolum]').forEach(function (s) { s.hidden = s.getAttribute('data-bolum') !== d; });
+    b.forEach(function (x) { x.setAttribute('aria-pressed', String(x.getAttribute('data-dil') === d)); });
+    document.documentElement.lang = d;
+    try { localStorage.setItem('dil', d); } catch (e) {}
+  }
+  b.forEach(function (x) { x.addEventListener('click', function () { sec(x.getAttribute('data-dil')); }); });
+  var k = null;
+  if (location.hash === '#en') k = 'en';
+  if (!k) { try { k = localStorage.getItem('dil'); } catch (e) {} }
+  if (!k && !/^tr/i.test(navigator.language || '')) k = 'en';
+  sec(k === 'en' ? 'en' : 'tr');
+})();
+</script>
+</body>
+</html>

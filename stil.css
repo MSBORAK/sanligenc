@@ -1,0 +1,28 @@
+:root{--bg:#FFF8F2;--kart:#FFFFFF;--yazi:#2F2418;--soluk:#6B5B4E;--vurgu:#F2600C;--cizgi:#F0E4D8}
+@media (prefers-color-scheme:dark){:root{--bg:#17110C;--kart:#221912;--yazi:#F5EDE6;--soluk:#B8A89A;--vurgu:#FF7A2E;--cizgi:#3A2C21}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--yazi);font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-text-size-adjust:100%}
+header{max-width:760px;margin:0 auto;padding:20px 16px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.marka{display:flex;align-items:center;gap:10px;color:var(--yazi);text-decoration:none;font-weight:800;font-size:20px}
+.marka img{border-radius:10px}
+.dil{display:flex;border:1px solid var(--cizgi);border-radius:999px;overflow:hidden}
+.dil button{border:0;background:transparent;color:var(--soluk);font:600 14px inherit;font-family:inherit;padding:6px 14px;cursor:pointer}
+.dil button[aria-pressed="true"]{background:var(--vurgu);color:#fff}
+main{max-width:760px;margin:0 auto;padding:0 16px 40px}
+section{background:var(--kart);border:1px solid var(--cizgi);border-radius:20px;padding:24px 22px 28px}
+nav{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
+nav a{font-size:14px;color:var(--soluk);text-decoration:none;padding:5px 12px;border-radius:999px;background:var(--bg)}
+nav a[aria-current="page"]{color:#fff;background:var(--vurgu)}
+h1{font-size:30px;line-height:1.2;margin:4px 0 8px}
+h2{font-size:19px;margin:28px 0 8px}
+h3{font-size:16px;margin:20px 0 4px}
+p,li{overflow-wrap:anywhere}
+.tarih{color:var(--soluk);font-size:14px;margin-top:0}
+ul{padding-left:20px}
+a{color:var(--vurgu)}
+.kart{display:flex;flex-direction:column;gap:2px;background:var(--bg);border-radius:14px;padding:14px 16px;margin:16px 0}
+.giris{font-size:18px}
+.linkler{list-style:none;padding:0;display:grid;gap:10px}
+.linkler a{display:block;padding:14px 16px;border-radius:14px;background:var(--bg);text-decoration:none;font-weight:600}
+footer{max-width:760px;margin:0 auto;padding:0 16px 32px;color:var(--soluk);font-size:13px;text-align:center}
+@media (max-width:480px){h1{font-size:25px}section{padding:20px 16px 24px}}
