@@ -1,64 +1,287 @@
 <!doctype html>
 <html lang="tr">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ŞanlıGenç · ŞanlıGenç</title>
-<meta name="description" content="ŞanlıGenç — Şanlıurfa gençlik ve şehir uygulaması. ŞanlıGenç.">
-<link rel="icon" href="logo.jpg">
-<link rel="stylesheet" href="stil.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>ŞanlıGenç | Şanlıurfa'nın gençlik uygulaması</title>
+  <meta name="description" content="Şanlıurfa'nın gençlik uygulaması ŞanlıGenç: arkadaşlarınla anlık Kıvılcım paylaş, Genç Kart ile anlaşmalı mekanlarda indirim kazan, etkinlikleri, ulaşımı ve nöbetçi eczaneyi tek yerden bul.">
+  <meta name="theme-color" content="#FFF6EC">
+  <meta property="og:title" content="ŞanlıGenç | Şanlıurfa'nın gençlik uygulaması">
+  <meta property="og:description" content="Kıvılcım, Genç Kart, etkinlikler ve ulaşım. Masal ve Aras ile şehri keşfet.">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://sanligenc.com.tr/">
+  <meta property="og:url" content="https://sanligenc.com.tr/">
+  <meta property="og:site_name" content="ŞanlıGenç">
+  <meta property="og:locale" content="tr_TR">
+  <meta property="og:image" content="https://sanligenc.com.tr/img/masal-aras-og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Masal ve Aras: ŞanlıGenç, Şanlıurfa'nın gençlik uygulaması">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ŞanlıGenç | Şanlıurfa'nın gençlik uygulaması">
+  <meta name="twitter:description" content="Kıvılcım, Genç Kart, etkinlikler ve ulaşım. Masal ve Aras ile şehri keşfet.">
+  <meta name="twitter:image" content="https://sanligenc.com.tr/img/masal-aras-og.jpg">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"ŞanlıGenç","url":"https://sanligenc.com.tr/","logo":"https://sanligenc.com.tr/img/logo.png","email":"destek@sanligenc.com.tr","sameAs":["https://www.instagram.com/sanligencapp/"]}</script>
+  <link rel="icon" href="img/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=11">
 </head>
 <body>
-<header>
-  <a class="marka" href="./"><img src="logo.jpg" alt="" width="40" height="40"><span>ŞanlıGenç</span></a>
-  <div class="dil" role="group" aria-label="Dil / Language">
-    <button type="button" data-dil="tr" aria-pressed="true">TR</button>
-    <button type="button" data-dil="en" aria-pressed="false">EN</button>
-  </div>
-</header>
-<main>
-  <section lang="tr" data-bolum="tr">
-    <nav><a href="gizlilik/">Gizlilik</a><a href="kullanim-sartlari/">Kullanım Şartları</a><a href="kvkk/">KVKK</a><a href="destek/">Destek</a></nav>
-    <h1>ŞanlıGenç</h1>
-    
-<p class="giris">Şanlıurfa'daki etkinlikler, gençlere özel indirimler, ulaşım, nöbetçi eczaneler ve şehrin sosyal nabzı — hepsi tek uygulamada.</p>
-<ul class="linkler">
-<li><a href="gizlilik/">Gizlilik Politikası</a></li>
-<li><a href="kullanim-sartlari/">Kullanım Şartları</a></li>
-<li><a href="kvkk/">KVKK Aydınlatma Metni</a></li>
-<li><a href="destek/">Destek ve İletişim</a></li>
-</ul>
-  </section>
-  <section lang="en" data-bolum="en" hidden>
-    <nav><a href="gizlilik/#en">Privacy</a><a href="kullanim-sartlari/#en">Terms</a><a href="kvkk/#en">KVKK</a><a href="destek/#en">Support</a></nav>
-    <h1>ŞanlıGenç</h1>
-    
-<p class="giris">Events in Şanlıurfa, exclusive youth discounts, transport, on-duty pharmacies, and the city's social pulse — all in one app.</p>
-<ul class="linkler">
-<li><a href="gizlilik/#en">Privacy Policy</a></li>
-<li><a href="kullanim-sartlari/#en">Terms of Use</a></li>
-<li><a href="kvkk/#en">KVKK Disclosure Notice</a></li>
-<li><a href="destek/#en">Support &amp; Contact</a></li>
-</ul>
-  </section>
-</main>
-<footer>© 2026 MSE SOFT · <a href="mailto:sanligenc.destek@gmail.com">sanligenc.destek@gmail.com</a></footer>
-<script>
-(function () {
-  var b = document.querySelectorAll('[data-dil]');
-  function sec(d) {
-    document.querySelectorAll('[data-bolum]').forEach(function (s) { s.hidden = s.getAttribute('data-bolum') !== d; });
-    b.forEach(function (x) { x.setAttribute('aria-pressed', String(x.getAttribute('data-dil') === d)); });
-    document.documentElement.lang = d;
-    try { localStorage.setItem('dil', d); } catch (e) {}
-  }
-  b.forEach(function (x) { x.addEventListener('click', function () { sec(x.getAttribute('data-dil')); }); });
-  var k = null;
-  if (location.hash === '#en') k = 'en';
-  if (!k) { try { k = localStorage.getItem('dil'); } catch (e) {} }
-  if (!k && !/^tr/i.test(navigator.language || '')) k = 'en';
-  sec(k === 'en' ? 'en' : 'tr');
-})();
-</script>
+
+  <header class="nav" id="nav">
+    <a class="brand" href="#top" aria-label="ŞanlıGenç ana sayfa">
+      <img src="img/logo.png" alt="" width="36" height="36">
+      <span>ŞanlıGenç</span>
+    </a>
+    <nav class="nav-links" aria-label="Sayfa bölümleri">
+      <a href="#tanis">Tanışın</a>
+      <a href="#ozellikler">Özellikler</a>
+      <a href="#guvenlik">Güvenlik</a>
+      <a href="#mekan">İşletmeler</a>
+    </nav>
+    <div class="nav-right">
+      <a class="ig-ico" href="https://www.instagram.com/sanligencapp/" target="_blank" rel="noopener" aria-label="ŞanlıGenç Instagram hesabı"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".9" fill="currentColor" stroke="none"/></svg></a>
+      <a class="pill soon" id="navCta" href="#indir" data-live="İndir">Çok yakında</a>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow reveal">Şanlıurfa'nın gençlik uygulaması</p>
+          <h1 class="reveal d1">Şehir senin,<br><em>kıvılcım</em> da.</h1>
+          <p class="lead reveal d2">Arkadaşlarınla anlık paylaş, Genç Kart ile indirim kazan, etkinlikleri ve ulaşımı tek yerden bul. Hepsi Şanlıurfa için, Şanlıurfalı gençler için.</p>
+          <div class="store reveal d3">
+            <span class="store-btn" data-store="ios" aria-disabled="true"><b>App Store</b><small>Çok yakında</small></span>
+            <span class="store-btn" data-store="android" aria-disabled="true"><b>Google Play</b><small>Çok yakında</small></span>
+          </div>
+        </div>
+
+        <div class="hero-stage reveal d2" aria-hidden="false">
+          <div class="blob"></div>
+          <div class="phone hero-phone"><img src="img/app-ana.jpg" width="720" height="1566" alt="ŞanlıGenç ana sayfası: ŞanlıSosyal, keşfet ve Genç Kart fırsatları" loading="eager"></div>
+          <span class="ground g-masal" aria-hidden="true"></span>
+          <span class="ground g-aras" aria-hidden="true"></span>
+          <img class="char masal float-a" src="img/masal.png" alt="Masal" width="340">
+          <img class="char aras float-b" src="img/aras.png" alt="Aras" width="360">
+          <div class="bubble b-masal">Ben Masal!</div>
+          <div class="bubble b-aras">Ben de Aras.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TANIŞIN -->
+    <section class="meet" id="tanis">
+      <div class="wrap narrow">
+        <p class="eyebrow center reveal">Tanışın</p>
+        <h2 class="center reveal d1">Şehri size <em>Masal ve Aras</em> gezdirecek.</h2>
+        <p class="sub center reveal d2">İkisi de Urfalı, ikisi de bu şehri seviyor. ŞanlıGenç'i onlarla birlikte tanıyacaksınız.</p>
+
+        <div class="chat">
+          <div class="msg aras reveal"><span class="av av-aras" aria-hidden="true"></span><div class="bub"><b>Aras</b><p>Masal, bu akşam ne yapsak? Hiçbir plan yok.</p></div></div>
+          <div class="msg masal reveal d1"><span class="av av-masal" aria-hidden="true"></span><div class="bub"><b>Masal</b><p>Dur bakalım. Önce uygulamaya bir bakalım.</p></div></div>
+          <div class="msg aras reveal d2"><span class="av av-aras" aria-hidden="true"></span><div class="bub"><b>Aras</b><p>Hangi uygulama?</p></div></div>
+          <div class="msg masal reveal d3"><span class="av av-masal" aria-hidden="true"></span><div class="bub"><b>Masal</b><p>ŞanlıGenç. Şehirde ihtiyacımız olan her şey orada.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ÖZELLİKLER -->
+    <section class="features" id="ozellikler">
+
+      <!-- Genç Kart -->
+      <article class="feature">
+        <div class="wrap f-grid">
+          <div class="f-visual reveal">
+            <div class="phone"><div class="screen"><img src="img/app-genckart.jpg" width="720" height="1566" alt="Genç Kart ekranı: anlaşmalı mekanlar ve indirimler" loading="lazy">
+              <nav class="tabbar" aria-hidden="true">
+                <span class="tb"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="13" rx="3"/><path d="M4 11h16M8 20v-3M16 20v-3"/><circle cx="8.5" cy="14" r=".6"/><circle cx="15.5" cy="14" r=".6"/></svg></i>Ulaşım</span>
+                <span class="tb tb-on"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="3.5" width="6" height="6" rx="1"/><rect x="14.5" y="3.5" width="6" height="6" rx="1"/><rect x="3.5" y="14.5" width="6" height="6" rx="1"/><path d="M14.5 14.5h2.5v2.5M20.5 14.5v.01M14.5 20.5h6"/></svg></i></span>
+                <span class="tb"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11.5 12 4l8 7.5V20H4z"/><path d="M10 20v-5h4v5"/></svg></i>Ana Sayfa</span>
+                <span class="tb"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M4 9.3h16M4 14.7h16M9.3 4v16M14.7 4v16"/></svg></i>Şehir</span>
+                <span class="tb"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8.5" r="3.6"/><path d="M5 20c.8-3.6 3.6-5.4 7-5.4s6.2 1.8 7 5.4"/></svg></i>Profil</span>
+              </nav></div></div>
+            <div class="peek peek-aras"><img src="img/aras.png" alt="" aria-hidden="true"></div>
+            <div class="bubble b-f1">Acıktım!</div>
+          </div>
+          <div class="f-copy">
+            <p class="eyebrow reveal">Genç Kart</p>
+            <h2 class="reveal d1">Anlaşmalı mekanlarda <em>indirim</em> senin.</h2>
+            <p class="reveal d2">Şanlıurfa'daki kafe, restoran, pastane ve dükkanlarda Genç Kart'ınla indirimden yararlan. Kasada QR'ı okut, indirimini hemen al.</p>
+            <ul class="ticks reveal d3">
+              <li>Kafe, restoran, pastane, teknoloji ve daha fazlası</li>
+              <li>Yeni mekanlar ve fırsatlar düzenli olarak eklenir</li>
+              <li>Mekanın kendi QR kodunu okutarak kullanırsın</li>
+            </ul>
+            <div class="say reveal d3"><span class="av av-masal" aria-hidden="true"></span><p>"Genç Kart'la daha da güzel!"</p></div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Şehir -->
+      <article class="feature alt">
+        <div class="wrap f-grid">
+          <div class="f-visual reveal">
+            <div class="phone"><img src="img/app-sehir.jpg" width="720" height="1566" alt="Şehir ekranı: etkinlikler, keşfet, eczane, kütüphane ve gezi rotası" loading="lazy"></div>
+            <div class="peek peek-masal"><img src="img/masal.png" alt="" aria-hidden="true"></div>
+            <div class="bubble b-f2">Bu hafta konser var!</div>
+          </div>
+          <div class="f-copy">
+            <p class="eyebrow reveal">Şehir</p>
+            <h2 class="reveal d1">Şehirde neler oluyor? <em>Kaçırma.</em></h2>
+            <p class="reveal d2">Konserler, tiyatrolar, sergiler... Etkinlikleri tarihine göre gör, favorine ekle. Göbeklitepe'den Balıklıgöl'e tarihi yerleri keşfet, gezi rotası planla.</p>
+            <ul class="ticks reveal d3">
+              <li>Yaklaşan etkinlikler tek listede</li>
+              <li>Tarihi yerler ve gezi rotaları</li>
+              <li>Nöbetçi eczane ve kütüphane bilgisi</li>
+            </ul>
+            <div class="say reveal d3"><span class="av av-aras" aria-hidden="true"></span><p>"Tamam, bu hafta sonu bu iş olur."</p></div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Ulaşım -->
+      <article class="feature">
+        <div class="wrap f-grid">
+          <div class="f-visual reveal">
+            <div class="phone"><img src="img/app-ulasim.jpg" width="720" height="1566" alt="Ulaşım ekranı: durak bul, rota planla" loading="lazy"></div>
+            <div class="peek peek-aras"><img src="img/aras.png" alt="" aria-hidden="true"></div>
+            <div class="bubble b-f3">Otobüs nerede?</div>
+          </div>
+          <div class="f-copy">
+            <p class="eyebrow reveal">Ulaşım</p>
+            <h2 class="reveal d1">Durağını bul, <em>yolunu planla.</em></h2>
+            <p class="reveal d2">Nereden nereye gideceğini yaz, hangi hatla gideceğini ve nerede ineceğini gör. En yakın durağın haritada hemen karşında.</p>
+            <ul class="ticks reveal d3">
+              <li>Hat ve durak arama</li>
+              <li>Başlangıç ve varış noktasına göre rota</li>
+              <li>Favori duraklar, tek dokunuşla</li>
+            </ul>
+            <div class="say reveal d3"><span class="av av-masal" aria-hidden="true"></span><p>"Durağın hemen şurada, bak."</p></div>
+          </div>
+        </div>
+      </article>
+
+      <!-- ŞanlıSosyal -->
+      <article class="feature alt">
+        <div class="wrap f-grid">
+          <div class="f-visual reveal">
+            <div class="kivilcim" aria-hidden="true">
+              <div class="k-card">
+                <div class="k-photo p1"><span class="k-chip">3sa 44dk</span></div>
+                <div class="k-meta"><i class="av-nehir"></i><b>@nehir</b><span></span></div>
+              </div>
+              <div class="k-card k-2">
+                <div class="k-photo p2"><span class="k-chip">1sa 12dk</span></div>
+                <div class="k-meta"><i class="av-poyraz"></i><b>@poyraz</b><span></span></div>
+              </div>
+            </div>
+            <div class="peek peek-masal"><img src="img/masal.png" alt="" aria-hidden="true"></div>
+            <div class="bubble b-f4">Anını at!</div>
+          </div>
+          <div class="f-copy">
+            <p class="eyebrow reveal">ŞanlıSosyal</p>
+            <h2 class="reveal d1">Anı yakala, <em>4 saatte</em> kaybolsun.</h2>
+            <p class="reveal d2">Kıvılcım at, yalnızca arkadaşların görsün. Dört saat sonra kendiliğinden kaybolur. Sohbet et, grup kur, Şehir Radarı'nda şehrin bugünkü nabzını gör.</p>
+            <ul class="ticks reveal d3">
+              <li>Kıvılcım: anlık, geçici fotoğraf</li>
+              <li>Birebir sohbet ve gruplar, mesajlara emoji tepkisi</li>
+              <li>Sadece arkadaşlarınla: kimin göreceğine sen karar verirsin</li>
+            </ul>
+            <div class="say reveal d3"><span class="av av-aras" aria-hidden="true"></span><p>"Kıvılcım rekabeti başlasın!"</p></div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- GÜVENLİK -->
+    <section class="safety" id="guvenlik">
+      <div class="wrap">
+        <div class="narrow center">
+          <p class="eyebrow reveal">Güvenlik</p>
+          <h2 class="reveal d1">Güvenliğin <em>sende.</em></h2>
+          <p class="sub reveal d2">ŞanlıGenç 18 yaş ve üzeri için. Kimin ne göreceğine sen karar verirsin, istemediğin an kapatırsın.</p>
+        </div>
+        <div class="cards">
+          <details class="card acc reveal" open><summary><span class="ico big">18+</span><h3>18 yaş ve üzeri</h3><i class="chev" aria-hidden="true"></i></summary><p>Uygulamayı kullanmak için en az 18 yaşında olmak gerekir. Giriş, e-postana gelen tek kullanımlık kodla yapılır.</p></details>
+          <details class="card acc reveal d1" open><summary><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8.5" r="3.2"/><path d="M3.5 19c.6-3.2 2.8-4.8 5.5-4.8s4.9 1.6 5.5 4.8"/><path d="M15.5 5.6a3 3 0 0 1 0 5.8M17 14.6c2 .5 3.3 2 3.7 4.4"/></svg></span><h3>Sadece arkadaşların</h3><i class="chev" aria-hidden="true"></i></summary><p>Mesajlaşmak ve Kıvılcımlarını görmek için iki tarafın da arkadaşlığı kabul etmesi gerekir. Tanımadığın biri sana yazamaz.</p></details>
+          <details class="card acc reveal d2" open><summary><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg></span><h3>Geçici paylaşım</h3><i class="chev" aria-hidden="true"></i></summary><p>Kıvılcımlar 4 saatte kendiliğinden kaybolur. Sohbet mesajları da 24 saat sonra silinir.</p></details>
+          <details class="card acc reveal" open><summary><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 21V4M5 4h11l-2 4 2 4H5"/></svg></span><h3>Engelle ve şikâyet et</h3><i class="chev" aria-hidden="true"></i></summary><p>Kişiyi, Kıvılcımı, mesajı ya da yorumu tek dokunuşla şikâyet edebilirsin. Şikâyetler 24 saat içinde incelenir. Engellediğin kişi sana yazamaz.</p></details>
+          <details class="card acc reveal d1" open><summary><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s6.5-5.6 6.5-11a6.5 6.5 0 0 0-13 0c0 5.4 6.5 11 6.5 11z"/><circle cx="12" cy="10" r="2.4"/></svg></span><h3>Konumun senin kontrolünde</h3><i class="chev" aria-hidden="true"></i></summary><p>Şehir Radarı'nda görünmeyi istediğin an ayarlardan kapatabilirsin.</p></details>
+          <details class="card acc reveal d2" open><summary><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M9 7V4.5h6V7M6.5 7l.8 12.5h9.4L17.5 7M10 11v5M14 11v5"/></svg></span><h3>Hesabını sil</h3><i class="chev" aria-hidden="true"></i></summary><p>Profil'den hesabını silme talebi gönderebilirsin. Talepler en geç 30 gün içinde sonuçlanır.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <!-- MEKAN -->
+    <section class="venue" id="mekan">
+      <div class="wrap">
+        <div class="narrow center">
+          <p class="eyebrow reveal">İşletmeler için</p>
+          <h2 class="reveal d1">Mekanın mı var? <em>Gençler kapına gelsin.</em></h2>
+          <p class="sub reveal d2">Genç Kart'a katılan işletmeler uygulamada yer alır. Genç, indirimini kasada QR kodu okutarak kullanır. Sizden ekstra cihaz ya da yazılım istemiyoruz.</p>
+        </div>
+
+        <ol class="steps">
+          <li class="step reveal"><details class="acc" open><summary><span class="num">1</span><h3>Anlaşırız</h3><i class="chev" aria-hidden="true"></i></summary><p>Kısa bir protokolle indirim oranını ve kullanım sıklığını (örneğin ayda kaç kez) birlikte belirleriz.</p></details></li>
+          <li class="step reveal d1"><details class="acc" open><summary><span class="num">2</span><h3>QR kodunuzu alırsınız</h3><i class="chev" aria-hidden="true"></i></summary><p>İşletmenize özel QR kodunuzu kasaya ya da vitrine koyarsınız. Fırsatınız uygulamada yayınlanır.</p></details></li>
+          <li class="step reveal d2"><details class="acc" open><summary><span class="num">3</span><h3>Genç okutur, indirimini alır</h3><i class="chev" aria-hidden="true"></i></summary><p>Genç QR'ı okutur, uygulama indirimi doğrular. Bir kişi hakkından fazla kullanamaz.</p></details></li>
+        </ol>
+
+        <div class="benefits">
+          <div class="benefit reveal"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8.5" r="3.2"/><path d="M3.5 19c.6-3.2 2.8-4.8 5.5-4.8s4.9 1.6 5.5 4.8"/><path d="M15.5 5.6a3 3 0 0 1 0 5.8M17 14.6c2 .5 3.3 2 3.7 4.4"/></svg></span><div><b>Yeni müşteri</b><span>Şehirdeki gençler fırsatınızı uygulamada görür.</span></div></div>
+          <div class="benefit reveal d1"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="3.5" width="6" height="6" rx="1"/><rect x="14.5" y="3.5" width="6" height="6" rx="1"/><rect x="3.5" y="14.5" width="6" height="6" rx="1"/><path d="M14.5 14.5h2.5v2.5M20.5 14.5v.01M14.5 20.5h6"/></svg></span><div><b>Kolay kullanım</b><span>Kasada sadece QR okutulur, ekstra kurulum yok.</span></div></div>
+          <div class="benefit reveal d2"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h9M17 7h3M4 17h3M11 17h9"/><circle cx="15" cy="7" r="2"/><circle cx="9" cy="17" r="2"/></svg></span><div><b>Koşullar sizinle birlikte</b><span>İndirim oranı ve kullanım sıklığı birlikte belirlenir.</span></div></div>
+        </div>
+
+        <div class="center venue-cta">
+          <div class="chips reveal d2">
+            <span>Kafe</span><span>Restoran</span><span>Pastane</span><span>Teknoloji</span><span>Pet Shop</span><span>Berber</span><span>Spor</span>
+          </div>
+          <a class="btn reveal d3" href="mailto:destek@sanligenc.com.tr?subject=Genç%20Kart%20anlaşması">Bize yaz, birlikte çalışalım</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- İNDİR -->
+    <section class="download" id="indir">
+      <div class="wrap narrow center">
+        <img class="d-logo reveal" src="img/logo.png" alt="" width="88" height="88">
+        <h2 class="reveal d1" id="dlTitle" data-live="ŞanlıGenç <em>yayında!</em> Şimdi indir.">ŞanlıGenç <em>çok yakında</em><br class="br-dl"> App Store ve Google Play'de.</h2>
+        <p class="sub reveal d2" id="dlSub" data-live="App Store ya da Google Play'den indir, arkadaşlarınla şehre katıl.">Çıktığı gün ilk burada duyuracağız. Masal ve Aras şimdiden hazır.</p>
+        <div class="store dark reveal d3">
+          <span class="store-btn" data-store="ios" aria-disabled="true"><b>App Store</b><small>Çok yakında</small></span>
+          <span class="store-btn" data-store="android" aria-disabled="true"><b>Google Play</b><small>Çok yakında</small></span>
+        </div>
+        <a class="ig-btn reveal d3" href="https://www.instagram.com/sanligencapp/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".9" fill="currentColor" stroke="none"/></svg><span>Instagram'da takip et <b>@sanligencapp</b></span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap foot-grid">
+      <div>
+        <a class="brand" href="#top"><img src="img/logo.png" alt="" width="32" height="32"><span>ŞanlıGenç</span></a>
+        <p class="muted">Şanlıurfa'nın gençlik uygulaması.<br>MSE SOFT tarafından geliştirilmiştir.</p>
+      </div>
+      <nav class="foot-links" aria-label="Yasal ve destek">
+        <a href="gizlilik/">Gizlilik Politikası</a>
+        <a href="kullanim-sartlari/">Kullanım Şartları</a>
+        <a href="kvkk/">KVKK Aydınlatma</a>
+        <a href="destek/">Destek</a>
+        <a href="mailto:destek@sanligenc.com.tr">destek@sanligenc.com.tr</a>
+        <a class="foot-ig" href="https://www.instagram.com/sanligencapp/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".9" fill="currentColor" stroke="none"/></svg><span>@sanligencapp</span></a>
+      </nav>
+    </div>
+    <p class="copy">© 2026 ŞanlıGenç</p>
+  </footer>
+
+  <script src="script.js?v=4"></script>
 </body>
 </html>
