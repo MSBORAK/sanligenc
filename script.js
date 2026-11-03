@@ -32,8 +32,8 @@
 // ---- Yayın günü: mağaza adreslerini buraya yaz, düğmeler otomatik aktif olur ----
 (function () {
   var STORES = {
-    ios: '',      // örn. 'https://apps.apple.com/tr/app/sanligenc/id0000000000'
-    android: ''   // örn. 'https://play.google.com/store/apps/details?id=com.xxx'
+    ios: 'https://apps.apple.com/tr/app/%C5%9Fanl%C4%B1gen%C3%A7/id6811979693',
+    android: 'https://play.google.com/store/apps/details?id=com.sanligenc.app'
   };
   var any = !!(STORES.ios || STORES.android);
   var both = !!(STORES.ios && STORES.android);

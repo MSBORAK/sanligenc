@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ŞanlıGenç'i indir</title>
+<meta name="description" content="ŞanlıGenç, Şanlıurfa'nın gençlik uygulaması. App Store ve Google Play'den indir.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="../logo.jpg">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px;background:#FFF6EC;color:#1B1410;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;text-align:center}
+.card{max-width:380px;width:100%}
+.logo{width:88px;height:88px;border-radius:22px;box-shadow:0 8px 24px rgba(242,96,12,.25);margin-bottom:20px}
+h1{font-size:26px;line-height:1.2;margin-bottom:8px}
+h1 em{font-style:normal;color:#F2600C}
+p{color:#5b4a40;line-height:1.5;margin-bottom:24px}
+.btn{display:block;padding:15px 18px;margin-bottom:12px;border-radius:14px;background:#1B1410;color:#fff;text-decoration:none;font-weight:700;font-size:17px}
+.btn small{display:block;font-weight:500;font-size:12px;opacity:.75}
+.btn.alt{background:#F2600C}
+.note{font-size:13px;color:#8a7668;margin-top:18px}
+.note a{color:#F2600C}
+</style>
+</head>
+<body>
+<main class="card">
+  <img class="logo" src="../logo.jpg" alt="ŞanlıGenç">
+  <h1>Şanlıurfa'nın gençlik uygulaması <em>yayında!</em></h1>
+  <p id="msg">Cihazına uygun mağazaya yönlendiriliyorsun. Yönlendirilmezsen aşağıdan seç.</p>
+  <a class="btn" id="ios" href="https://apps.apple.com/tr/app/%C5%9Fanl%C4%B1gen%C3%A7/id6811979693"><small>iPhone için</small>App Store'dan indir</a>
+  <a class="btn alt" id="android" href="https://play.google.com/store/apps/details?id=com.sanligenc.app"><small>Android için</small>Google Play'den indir</a>
+  <p class="note"><a href="../">sanligenc.com.tr</a></p>
+</main>
+<script>
+(function () {
+  var ua = navigator.userAgent || '';
+  var target = null;
+  if (/iPhone|iPad|iPod/i.test(ua)) target = document.getElementById('ios').href;
+  else if (/Android/i.test(ua)) target = document.getElementById('android').href;
+  if (target) {
+    setTimeout(function () { location.replace(target); }, 300);
+  } else {
+    document.getElementById('msg').textContent = 'Telefonundan açarsan seni doğru mağazaya yönlendiririz. Ya da aşağıdan seç.';
+  }
+})();
+</script>
+</body>
+</html>
