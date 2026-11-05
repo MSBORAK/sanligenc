@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ŞanlıGenç grup daveti</title>
+<meta name="description" content="ŞanlıGenç'te bir gruba davet edildin. Uygulamada aç ya da indir.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="../logo.jpg">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px;background:#FFF6EC;color:#1B1410;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;text-align:center}
+.card{max-width:380px;width:100%}
+.logo{width:88px;height:88px;border-radius:22px;box-shadow:0 8px 24px rgba(242,96,12,.25);margin-bottom:20px}
+h1{font-size:25px;line-height:1.25;margin-bottom:8px}
+h1 em{font-style:normal;color:#F2600C}
+p{color:#5b4a40;line-height:1.5;margin-bottom:22px}
+.btn{display:block;padding:15px 18px;margin-bottom:12px;border-radius:14px;background:#F2600C;color:#fff;text-decoration:none;font-weight:700;font-size:17px}
+.btn.dark{background:#1B1410}
+.btn small{display:block;font-weight:500;font-size:12px;opacity:.8}
+.sep{font-size:13px;color:#8a7668;margin:18px 0 12px}
+.code{display:inline-block;font-family:ui-monospace,Menlo,monospace;font-size:13px;background:#fff;border:1px solid #ecd9c8;border-radius:10px;padding:10px 12px;word-break:break-all;margin-bottom:10px}
+.note{font-size:13px;color:#8a7668;margin-top:16px;line-height:1.5}
+.note a{color:#F2600C}
+.hide{display:none}
+</style>
+</head>
+<body>
+<main class="card">
+  <img class="logo" src="../logo.jpg" alt="ŞanlıGenç">
+  <div id="ok" class="hide">
+    <h1>ŞanlıGenç'te bir <em>gruba davet</em> edildin</h1>
+    <p>Uygulaman varsa aşağıdan aç. Katılma isteği gruba gönderilir, yönetici onaylayınca gruba katılırsın.</p>
+    <a class="btn" id="open" href="#">Uygulamada aç</a>
+    <p class="sep">Uygulaman yok mu?</p>
+    <a class="btn dark" id="ios" href="https://apps.apple.com/tr/app/%C5%9Fanl%C4%B1gen%C3%A7/id6811979693"><small>iPhone için</small>App Store'dan indir</a>
+    <a class="btn dark" id="android" href="https://play.google.com/store/apps/details?id=com.sanligenc.app"><small>Android için</small>Google Play'den indir</a>
+    <p class="note">İndirdikten sonra bu bağlantıya tekrar dokun. Olmazsa uygulamada <b>Mesajlar &gt; Kodla katıl</b> bölümüne bu kodu yapıştır:<br><span class="code" id="code"></span></p>
+  </div>
+  <div id="bad" class="hide">
+    <h1>Bu davet bağlantısı <em>geçersiz</em></h1>
+    <p>Bağlantı eksik ya da yanlış kopyalanmış olabilir. Davet eden kişiden yenisini iste.</p>
+    <a class="btn dark" href="../indir/">ŞanlıGenç'i indir</a>
+  </div>
+  <p class="note"><a href="../">sanligenc.com.tr</a></p>
+</main>
+<script>
+(function () {
+  // Adres: /g/<20 haneli kod>
+  var m = /\/g\/([0-9a-f]{20})\/?$/i.exec(location.pathname);
+  if (!m) { document.getElementById('bad').className = ''; return; }
+  var code = m[1].toLowerCase();
+  document.getElementById('ok').className = '';
+  document.getElementById('code').textContent = code;
+
+  var ua = navigator.userAgent || '';
+  var isAndroid = /Android/i.test(ua);
+  var isIOS = /iPhone|iPad|iPod/i.test(ua);
+  var open = document.getElementById('open');
+
+  if (isAndroid) {
+    // Uygulama kuruluysa açar, değilse Google Play'e düşer
+    open.href = 'intent://grup/' + code + '#Intent;scheme=sanligenc;package=com.sanligenc.app;' +
+      'S.browser_fallback_url=' + encodeURIComponent('https://play.google.com/store/apps/details?id=com.sanligenc.app') + ';end';
+    document.getElementById('ios').className = 'hide';
+  } else if (isIOS) {
+    open.href = 'sanligenc://grup/' + code;
+    document.getElementById('android').className = 'hide';
+  } else {
+    // Bilgisayar: telefondan açılması gerekir
+    open.className = 'hide';
+    document.querySelector('#ok p').textContent = 'Bu bağlantıyı telefonundan aç. Uygulamayı indirmek için mağazalardan birini seç.';
+  }
+})();
+</script>
+</body>
+</html>
